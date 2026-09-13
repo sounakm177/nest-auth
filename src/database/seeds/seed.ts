@@ -1,10 +1,7 @@
 import 'dotenv/config';
 
 import { DataSource } from 'typeorm';
-
-// import { Role } from '../../modules/roles/entities/role.entity';
-
-// import { seedRoles } from './role.seed';
+import { seedUsers } from './user.seed.js';
 
 const dataSource = new DataSource({
   type: 'mysql',
@@ -26,7 +23,7 @@ async function runSeeds() {
   await dataSource.initialize();
 
   try {
-    // await seedRoles(dataSource);
+    await seedUsers(dataSource);
 
     console.log('Database seeding completed.');
   } catch (error) {

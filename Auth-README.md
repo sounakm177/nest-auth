@@ -35,3 +35,15 @@ npm install -D @types/passport-jwt
 
 # TypeScript types for bcrypt
 npm install -D @types/bcrypt
+
+
+
+
+
+
+
+npm run migration:create --name=MigrationName     # blank migration
+npm run migration:generate --name=CreateUsersTable # diff entities vs DB
+npm run migration:run
+npm run migration:show
+npm run seed
